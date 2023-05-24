@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MIwebAn</title>
+    <!--Estilos-->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!--Encabezado-->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">CODER ANGEL</a>
+            </div>
+                <nav id="nav" >
+                    <ul>
+                        <li><a href="#inicio" onClick="seleccionar()">Inicio</a></li>
+                        <li><a href="#sobremi" onClick="seleccionar()">Sobre Mi</a></li>
+                        <li><a href="#skills" onClick="seleccionar()">Skills</a></li>
+                        <li><a href="#Curriculum" onClick="seleccionar()">Curriculum</a></li>
+                        Practica Conmutación 1.pkt       <li><a href="#contacto" onClick="seleccionar()">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+        </header>
+    </div>
+    <!--SECCION INICIO-->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/2-removebg-preview.png" alt="Logo" width="200">
+            </div>
+            <h1> ANGEL MUNDO </h1>
+            <h2>  Ingeniero en Sistemas Computacionales --Especialidad en Software </h2>
+            <div class="redes">
+                <a href=""><i class="fa-brands fa-weebly"></i></a>
+                <a href="https://github.com/angelmund"><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi ">
+        <div class="contenido-seccion">
+            <h2>Sobre mi</h2>
+            <p><span>Hola,soy Miguel Angel Mundo.</span> Soy estudiante de la ingenier&iacute;a en Sistemas Computaciones, actualmente curso el octavo semestre de 
+            la carrera, soy apacionado a la programaci&oacute;n, me gustan los retos y aprender nuevas tecnolog&iacute;as</p>
+            
+            <div class="fila">
+                <!-- datos personales-->
+                <div class="col">
+                    <h3>Datos personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumplea&nacute;os</strong>
+                            02/10/1999
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            mmundo640@gmail.com
+                        </li>
+                        <li>
+                            <strong>Pa&iacute;s</strong>
+                            M&eacute;xico
+                        </li>
+                    </ul>
+                </div>
+
+                <!--intereses-->
+                <div class="col">
+                    <h3>Inter&eacute;ses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-brands fa-java" style="color: #b9b91c;"></i>
+                            
+                            <span>Programar</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-guitar" style="color: #b9b91c;"></i>
+                            <span>Guitar</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-android" style="color: #b9b91c;"></i>
+                            <span>Desarrollo de m&oacute;viles</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-duotone fa-mobile" style="color: #b9b91c;"></i>
+                            <span>Reparaci&oacute;n de  m&oacute;viles</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-duotone fa-desktop" style="color: #b9b91c;"></i>
+                            <span>Reparaci&oacute;n de Pc y Laptop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>Descargar CV <i class="fa-solid fa-download" style="color: #b9b91c;"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+    <!-- SKILLS-->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!--Technical  skills -->
+                <div class="col">
+                    <h3>--Technical Skills</h3>
+                    <!-- JavaScript-->
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso javascript">
+                                <span>57%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--HTML Y CSS-->
+                    <div class="skill">
+                        <span>HTML & css</span>
+                        <div class="barra-skill">
+                            <div class="progreso htmlcss">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Java-->
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso java">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Python-->
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso python">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SQL-->
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso sql">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sPRING-->
+                    <div class="skill">
+                        <span>Spring</span>
+                        <div class="barra-skill">
+                            <div class="progreso spring">
+                                <span>67%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Laravel-->
+                    <div class="skill">
+                        <span>Laravel</span>
+                        <div class="barra-skill">
+                            <div class="progreso laravel">
+                                <span>67%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--PHP-->
+                    <div class="skill">
+                        <span>Php</span>
+                        <div class="barra-skill">
+                            <div class="progreso php">
+                                <span>67%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PROFOSIONAL SKILLS-->
+                <div class="col">
+                    <h3>--Profesional Skills</h3>
+                    <!--    comunicaci-->
+                    <div class="skill">
+                        <span>Comunicaci&oacute;n</span>
+                        <div class="barra-skill">
+                            <div class="progreso comunicacion">
+                                <span>97%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Trabajo en equipo-->
+                    <div class="skill">
+                        <span>Trabajo en equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso trabajoEquipo">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Creatividad-->
+                    <div class="skill">
+                        <span>Dedicaci&oacute;n</span>
+                        <div class="barra-skill">
+                            <div class="progreso dedicacion">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Proyect Manager-->
+                    <div class="skill">
+                        <span>Proger Manager</span>
+                        <div class="barra-skill">
+                            <div class="progreso progermanager">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Proyect creatividad-->
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso progermanager">
+                                <span>88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM VITAE-->
+    <section id="Curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educaci&oacute;n</h3>
+                    <div class="item izq">
+                        <h4>Ingenier&iacute;a en Sistemas Computacionales</h4>
+                        <span class="casa">Intituto Superior de Xalapa</span>
+                        <span class="fecha">2019 - 2024</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3>Experiencia laboral</h3>
+                    <div class="item der">
+                        <h4>Compa&ntilde;ia</h4>
+                        <span class="casa">Call Center</span>
+                        <span class="fecha">Junio 2022 - Agosto 2022</span>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Compa&ntilde;ia</h4>
+                        <span class="casa">Doctor Phone</span>
+                        <span class="fecha">2020 - 2021</span>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Compa&ntilde;ia</h4>
+                        <span class="casa">CiberPlanet</span>
+                        <span class="fecha">2018 - 2019</span>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section class="portafolio" id="portafolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/pro1.png" alt="">
+                    <div class="overly">
+                        <h3>Citas M&eacute;dicas</h3>
+                        <p>Citas m&eacute;dicas para una mejor organizaci&oacute;n del consultorio</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/pro2.png" alt="">
+                    <div class="overly">
+                        <h3>Punto de Venta</h3>
+                        <p>Sistema de Punto de Ventas para cualquier negocio</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/pro3.png" alt="">
+                    <div class="overly">
+                        <h3>Cafeter&iacute;a</h3>
+                        <p>Punto de Venta Para Cafeter&iacute;a</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO-->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!--Formulario-->
+                <div class="col">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overly"></span>
+                    </button>
+                </div>
+                <!--Map-->
+                <div class="col">
+                    <img src="img/Localizacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                San Diegoc 234 
+                            </li>
+                            <li>
+                                <i class="fa-duotone fa-mobile"></i>
+                                Llamanos: 228 364 7440
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: mmundo640@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer-->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-sharp fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href=""><i class="fa-brands fa-weebly"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
