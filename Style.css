@@ -295,6 +295,7 @@ html{
     width: 0%;
     animation:  2s java forwards;
 }
+
 @keyframes java{
     0%{width: 0%;}
     100%{width: 90%;}
