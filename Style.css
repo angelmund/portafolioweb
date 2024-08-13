@@ -9,11 +9,42 @@
     /* Blanco */
     --color-acento: #6a0dad;
     /* Púrpura */
+    --color-naranja: rgb(204, 135, 44);
+    /*Azul rey*/
+    --color-azulRey: rgb(21, 50, 212);
+    /*Verde */
+    --color-verde: #1cb99f;
+    /*Negro degradado*/
+    --color-negro:#252a2e;
+    /*fond1*/
+    --color-fondo:#1e2326;
+
+    /*Colores para el nav y se vayan cambiando*/
     --color-uno: #9216a8;
     --color-dos: #751286;
     --color-tres:#580d65;
     --color-cuatro: #3a0943;
     --color-cinco: #1d0422;
+
+    /*Cards de skills*/
+
+    /*Python*/
+   --color-javascript:#f0db4f;
+   --color-text:#323330;
+   /*HTML*/
+   --color-html:rgba(227, 76, 38, 0.911);
+   /*Java*/
+   --color-java:#007396;
+   /*Python*/
+   --color-python:rgb(220,236,27);
+   --color-fondo:rgba(0, 115, 150, 0.911);
+   /*Laravel*/
+   --color-laravel:rgb(212, 59, 21);
+   /*css*/
+   --color-css:rgb(53, 182, 233);
+   /*Git*/
+   --color-git:#e44312de;
+
     
 }
 
@@ -111,7 +142,7 @@ html {
 
 .nav-responsive {
     background-color: var(--color-primario);
-    color: #fff;
+    color: var(--blanco);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -124,14 +155,14 @@ html {
         url(img/Fondo.jpg);
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: var(--blanco);
     display: flex;
     align-items: center;
 }
 
 .inicio .contenido-banner {
     padding: 20px;
-    background-color: #1e2326;
+    background-color: var(--color-fondo);
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -159,7 +190,7 @@ html {
 }
 
 .inicio .contenido-banner a {
-    color: #fff;
+    color: var(--blanco);
     display: inline-block;
     text-decoration: none;
     border: 1px solid var(--color-primario);
@@ -173,17 +204,17 @@ html {
 }
 
 .fa-brands .fa-facebook-f {
-    color: #929229;
+    color: var(--color-primario);
 }
 
 .inicio .contenido-banner .redes a:hover {
-    background-color: #1cb99f;
+    background-color: var(--color-verde);
 }
 
 /*Sobre mi */
 .sobremi {
-    background-color: #1e2326;
-    color: #fff;
+    background-color: var(--color-secundario);
+    color: var(--blanco);
     padding: 50px 20px;
 }
 
@@ -249,7 +280,7 @@ html {
 .sobremi .fila .col .contenedor-intereses .interes {
     width: 100px;
     height: 100px;
-    background-color: #252a2e;
+    background-color: var(--color-cuatro);
     border-radius: 10px;
     margin: 0 15px 15px 0;
     display: flex;
@@ -261,7 +292,7 @@ html {
 }
 
 .sobremi .fila .col .contenedor-intereses .interes:hover {
-    background-color: #1cb99f;
+    background-color: var(--color-verde);
 }
 
 .sobremi .fila .col .contenedor-intereses .interes i {
@@ -272,13 +303,13 @@ html {
 .sobremi button {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--blanco);
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: var(--blanco);
     position: relative;
     z-index: 10;
 }
@@ -289,7 +320,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1cb99f;
+    background-color: var(--color-verde);
     z-index: -1;
     transition: 1s;
 }
@@ -300,8 +331,8 @@ html {
 
 /*SKILLS*/
 .skills {
-    background-color: #252a2e;
-    color: #fff;
+    background-color: var(--color-negro);
+    color: var(--blanco);
     padding: 50px 20px;
 }
 
@@ -312,10 +343,11 @@ html {
 /* Estilos generales para las tarjetas */
 .card {
     background-color: var(--color-uno); /* Color de fondo por defecto */
-    color: #fff;
+    color: var(--blanco);
     padding: 2.5rem .3rem;
     border-radius: 2rem;
     transition: 0.5s;
+    margin-top: 1rem;
 }
 
 .card span {
@@ -324,56 +356,70 @@ html {
     text-align: center;
     padding: 1rem 0;
 }
-
+.skill i {
+    font-size: 3rem; /* Ajusta el tamaño del icono según tus necesidades */
+}
 /* Efectos de hover específicos para cada clase */
 .card.javascript:hover {
-    box-shadow: 0 6px 8px rgba(240, 219, 79, 0.911); /* Sombra para JavaScript */
-    background-color: #f0db4f; /* Fondo para JavaScript */
-    color: #323330; /* Color de texto para JavaScript */
+    box-shadow: 0 6px 8px var(--color-javascript); /* Sombra para JavaScript */
+    background-color: var(--color-javascript); /* Fondo para JavaScript */
+    color: var(--color-text); /* Color de texto para JavaScript */
 }
 
 .card.html:hover {
-    box-shadow: 0 6px 8px rgba(227, 76, 38, 0.911); /* Sombra para HTML */
-    background-color: #e34c26; /* Fondo para HTML */
-    color: #fff; /* Color de texto para HTML */
+    box-shadow: 0 6px 8px var(--color-html); /* Sombra para HTML */
+    background-color: var(--color-html); /* Fondo para HTML */
+    color: var(--blanco); /* Color de texto para HTML */
 }
 
 .card.java:hover {
-    box-shadow: 0 6px 8px rgba(0, 115, 150, 0.911); /* Sombra para Java */
-    background-color: #007396; /* Fondo para Java */
-    color: #fff; /* Color de texto para Java */
+    box-shadow: 0 6px 8px var(--color-java); /* Sombra para Java */
+    background-color: var(--color-java); /* Fondo para Java */
+    color: var(--blanco); /* Color de texto para Java */
 }
 
 .card.python:hover {
-    box-shadow: 0 6px 8px rgba(0, 115, 150, 0.911); /* Sombra para Java */
-    background: rgb(220,236,27);
-    background: linear-gradient(90deg, rgba(220,236,27,0.8827731776304272) 47%, rgba(61,184,209,0.737114914325105) 49%); 
-    color: #fff; /* Color de texto para pyhon */
+    box-shadow: 0 6px 8px var(--color-fondo); /* Sombra para Java */
+    background: var(--color-python);
+    color: var(--blanco); /* Color de texto para pyhon */
 }
 
 .card.sql:hover {
-    box-shadow: 0 6px 8px rgb(204, 135, 44); /* Sombra para Java */
-    background: rgb(204, 135, 44);
-    color: #fff; /* Color de texto para sql */
+    box-shadow: 0 6px 8px var(--color-naranja); /* Sombra para Java */
+    background: var(--color-naranja);
+    color: var(--blanco); /* Color de texto para sql */
 }
 
 .card.laravel:hover {
-    box-shadow: 0 6px 8px rgb(212, 59, 21); /* Sombra para Java */
-    background: rgb(255, 255, 255);
-    color: #cc1818; /* Color de texto para laravel */
+    box-shadow: 0 6px 8px var(--color-laravel); /* Sombra para laravel */
+    background: var(--blanco);
+    color: var(--color-laravel); /* Color de texto para laravel */
 }
 
 .card.php:hover {
-    box-shadow: 0 6px 8px rgb(21, 50, 212); /* Sombra para Java */
-    background: rgb(34, 31, 184);
-    color: #ffffff; /* Color de texto para php */
+    box-shadow: 0 6px 8px var(--color-azulRey); /* Sombra para php */
+    background: var(--color-azulRey);
+    color: var(--blanco); /* Color de texto para php */
 }
 
 .card.css:hover {
-    box-shadow: 0 6px 8px rgb(21, 50, 212); /* Sombra para Java */
-    background: rgb(53, 182, 233);
-    color: #ffffff; /* Color de texto para css */
+    box-shadow: 0 6px 8px var(--color-azulRey); /* Sombra para Css */
+    background: var(--color-css);
+    color: var(--blanco); /* Color de texto para css */
 }
+
+.card.git:hover {
+    box-shadow: 0 6px 8px var(--color-git); /* Sombra para Css */
+    background: var(--color-text);
+    color: var(--color-git); /* Color de texto para css */
+}
+
+.card.postgres:hover {
+    box-shadow: 0 6px 8px var(--blanco); /* Sombra para Css */
+    background: var(--color-java);
+    color: var(--blanco); /* Color de texto para css */
+}
+
 
 /* Efectos de hover generales */
 .card:hover {
@@ -405,8 +451,8 @@ html {
 
 /* curriculum*/
 .curriculum {
-    background-color: #1e2326;
-    color: #fff;
+    background-color: var(--color-fondo);
+    color: var(--blanco);
     padding: 50px 20px;
 }
 
@@ -440,17 +486,17 @@ html {
 }
 
 .curriculum .fila .izquierda {
-    border-right: 2px solid #252a2e;
+    border-right: 2px solid var(--color-negro);
 }
 
 .curriculum .fila .derecha {
-    border-left: 2px solid #252a2e;
+    border-left: 2px solid var(--color-negro);
 }
 
 .curriculum .fila .item {
     padding: 25px;
     margin-bottom: 30px;
-    background-color: #252a2e;
+    background-color: var(--color-negro);
     position: relative;
 }
 
@@ -469,7 +515,7 @@ html {
 
 .curriculum .fila .item .fecha {
     display: block;
-    color: #1cb99f;
+    color: var(--color-verde);
     margin-bottom: 10px;
 }
 
@@ -527,8 +573,8 @@ html {
 
 /* SECCION PORTAFOLIO*/
 .portafolio {
-    background-color: #252a2e;
-    color: #fff;
+    background-color: var(--color-negro);
+    color: var(--blanco);
     padding: 50px 20px;
 }
 
@@ -595,8 +641,8 @@ html {
 /* CONTACTO*/
 .contacto {
     background-image: url(img/fondo-contacto.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color: var(--color-fondo);
+    color: var(--blanco);
     padding: 50px 0;
 }
 
@@ -629,21 +675,21 @@ html {
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252a2e;
-    color: #fff;
+    background-color: var(--color-negro);
+    color: var(--blanco);
     font-size: 18px;
 }
 
 .contacto button {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--blanco);
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: var(--blanco);
     position: relative;
     z-index: 10;
 }
@@ -670,7 +716,7 @@ html {
 .contacto .col .info {
     position: absolute;
     top: 40%;
-    background-color: #252a2e;
+    background-color: var(--color-negro);
     padding: 20px;
     max-width: 350px;
     left: 50%;
@@ -692,8 +738,8 @@ html {
 }
 
 footer {
-    background-color: #252a2e;
-    color: #fff;
+    background-color: var(--color-negro);
+    color: var(--blanco);
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
@@ -705,7 +751,7 @@ footer .redes {
 }
 
 footer .redes a {
-    color: #fff;
+    color: var(--blanco);
     display: inline-block;
     text-decoration: none;
     border: 1px solid var(--color-primario);
@@ -723,7 +769,7 @@ footer .arriba {
     width: 50px;
     height: 50px;
     background-color: #1cb698;
-    color: #fff;
+    color: var(--blanco);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -748,7 +794,7 @@ footer .arriba {
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252a2e;
+        background-color: var(--color-negro);
         width: 180px;
     }
 
@@ -757,7 +803,7 @@ footer .arriba {
     }
 
     nav.responsive ul li {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid var(--blanco);
         padding: 10px 0;
     }
 }
