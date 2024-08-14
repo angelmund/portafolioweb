@@ -159,67 +159,51 @@ html {
     display: none;
 }
 
-/*SECCION INICIO */
+/* SECCION INICIO */
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-        url(img/Fondo.jpg);
+    background: var(--color-negro);
     background-size: cover;
     height: 90vh;
     color: var(--blanco);
     display: flex;
     align-items: center;
+    justify-content: center; 
 }
 
-.inicio .contenido-banner {
-    padding: 12.5rem;
-    background-color: var(--color-fondo);
-    max-width: 218.75rem;
+.imgPerfil {
+    margin-left: 2rem;
+    margin-right: 10rem;
+    max-width: 60rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%; 
+    object-fit: cover;
+    background-color: var(--color-negro);
+}
+
+.experiencia {
+    background-color: var(--color-secundario);
+    color: var(--blanco);
+    padding: 2.5rem .2rem;
+}
+
+.experiencia .contenido-seccion {
+    max-width: 487.5rem;
     margin: auto;
-    text-align: center;
-    border-radius: 2.5rem;
 }
 
-.inicio .contenido-banner {
-    margin-top: 50px;
-    border: 10px solid var(--color-primario);
-    display: block;
-    width: 90%;
-    margin: auto;
-    border-radius: 100%;
-}
-
-.inicio .contenido-banner h1 {
-    margin-top: 2.5rem;
-    font-size:2.625rem;
+.experiencia h2 {
+    font-size: 4rem;
     font-family: 'Righteous';
 }
-
-.inicio .contenido-banner h2 {
-    font-size: 9.3rem;
-    font-weight: normal;
-}
-
-.inicio .contenido-banner a {
-    color: var(--blanco);
-    display: inline-block;
-    text-decoration: none;
-    border: 0.0625rem solid var(--color-primario); /* 1px = 0.0625rem */
-    border-radius: 6.25rem; /* 100px = 6.25rem */
-    width: 2.625rem; /* 42px = 2.625rem */
-    height: 2.625rem; /* 42px = 2.625rem */
-    line-height: 2.625rem; /* 42px = 2.625rem */
-    margin: 2.5rem 0.3125rem; /* 40px = 2.5rem, 5px = 0.3125rem */
-    font-size: 1.25rem; /* 20px = 1.25rem */
-    transition: .3s;
-}
-
+/* 
 .fa-brands .fa-facebook-f {
     color: var(--color-primario);
-}
+} */
 
-.inicio .contenido-banner .redes a:hover {
+/* .inicio .contenido-banner .redes a:hover {
     background-color: var(--color-verde);
-}
+} */
 
 /*Sobre mi */
 .experiencia {
