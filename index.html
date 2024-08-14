@@ -24,7 +24,7 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onClick="seleccionar()">Inicio</a></li>
-                    <li><a href="#sobremi" onClick="seleccionar()">Sobre Mi</a></li>
+                    <li><a href="#experiencia" onClick="seleccionar()">Experiencia</a></li>
                     <li><a href="#skills" onClick="seleccionar()">Skills</a></li>
                     <li><a href="#Curriculum" onClick="seleccionar()">Curriculum</a></li>
                     <li><a href="#portafolio" onClick="seleccionar()">Portafolio</a></li>
@@ -40,98 +40,55 @@
     </div>
     <!--SECCION INICIO-->
     <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/2-removebg-preview.png" alt="Logo" width="200">
-            </div>
-            <h1> ANGEL MUNDO </h1>
-            <h2> Ingeniero en Sistemas Computacionales --Especialidad en Software </h2>
-            <div class="redes">
-                <a href="https://github.com/angelmund" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/miguel-angel-mundo-8b075a22a/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
 
-            </div>
-        </div>
 
     </section>
 
     <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi ">
+    <section id="experiencia" class="experiencia">
+        <h2>Experiencia</h2>
         <div class="contenido-seccion">
-            <h2>Sobre mi</h2>
-            <p><span>Hola,soy Miguel Angel Mundo.</span> Soy estudiante de la ingenier&iacute;a en Sistemas
-                Computaciones, actualmente curso el octavo semestre de
-                la carrera, soy apacionado a la programaci&oacute;n, me gustan los retos y aprender nuevas
-                tecnolog&iacute;as</p>
-
-            <div class="fila">
-                <!-- datos personales-->
-                <div class="col">
-                    <h3>Datos personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Cumplea&nacute;os</strong>
-                            02/10/1999
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            mmundo640@gmail.com
-                        </li>
-                        <li>
-                            <strong>Pa&iacute;s</strong>
-                            M&eacute;xico
-                        </li>
-                    </ul>
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card becario">
+                        <div class="card-title d-flex justify-content-center">
+                            <span>Becario FullStack</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="experiencia-item">
+                                <h3>Poder Judical del Estado de Veracruz</h3>
+                                <h5>Julio 2023-Actual</h5>
+                                <h6>A lo largo del periodo, desarroll&eacute; y di mantenimiento al Sistema Edictos,
+                                    adem&aacute;s participo en el desarrollo del sistema de agenda de audiencias</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!--intereses-->
-                <div class="col">
-                    <h3>Inter&eacute;ses</h3>
-                    <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-brands fa-java" style="color: #b9b91c;"></i>
-
-                            <span>Programar</span>
+                <div class="col-12 col-md-4">
+                    <div class="card galeana">
+                        <div class="card-title d-flex justify-content-center">
+                            <span class="text-center">FullStack Developer</h>
                         </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-guitar" style="color: #b9b91c;"></i>
-                            <span>Guitar</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-android" style="color: #b9b91c;"></i>
-                            <span>Desarrollo de m&oacute;viles</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-duotone fa-mobile" style="color: #b9b91c;"></i>
-                            <span>Reparaci&oacute;n de m&oacute;viles</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-duotone fa-desktop" style="color: #b9b91c;"></i>
-                            <span>Reparaci&oacute;n de Pc y Laptop</span>
+                        <div class="card-body">
+                            <div class="experiencia-item">
+                                <h3>Benita Galeana</h3>
+                                <h5>Noviembre 2023-Junio 2024</h5>
+                                <h6>
+                                Desarroll&eacute; un sistema que gestiona entradas y salidas monetarias as&iacute; como 
+                                    tambi&eacute;n el control del registro de participantes en proyectos de la empresa
+                                </h6>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button>Descargar CV <i class="fa-solid fa-download" style="color: #b9b91c;"></i>
-                <span class="overlay"></span>
-            </button>
         </div>
     </section>
     <!-- SKILLS-->
     <section class="skills" id="skills">
-        <h3 class="text-center">Skills</h3>
+        <h2 class="text-center">Skills</h2>
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
-                <div class="card javascript">
-                    <div class="card-body">
-                        <!-- JavaScript-->
-                        <div class="skill text-center">
-                            <i class="fab fa-js"></i><span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
                 <div class="card html">
@@ -139,6 +96,16 @@
                         <!-- HTML y CSS -->
                         <div class="skill text-center">
                             <i class="fab fa-html5"></i><span>HTML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+                <div class="card css">
+                    <div class="card-body">
+                        <div class="skill text-center">
+                            <i class="fab fa-css3-alt"></i><span>Css</span>
                         </div>
                     </div>
                 </div>
@@ -202,15 +169,7 @@
             </div>
 
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
-                <div class="card css">
-                    <div class="card-body">
-                        <div class="skill text-center">
-                            <i class="fab fa-css3-alt"></i><span>Css</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
                 <div class="card git">
@@ -223,10 +182,20 @@
             </div>
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
-                <div class="card postgres">
+                <div class="card bootstrap">
                     <div class="card-body">
                         <div class="skill text-center">
                             <i class="fab fa-bootstrap"></i><span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+                <div class="card javascript">
+                    <div class="card-body">
+                        <!-- JavaScript-->
+                        <div class="skill text-center">
+                            <i class="fab fa-js"></i><span>JavaScript</span>
                         </div>
                     </div>
                 </div>
