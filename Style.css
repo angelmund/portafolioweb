@@ -189,9 +189,24 @@ html {
     font-size: 2rem; 
 }
 .carousel-item img{
-    max-width: 60%;
-    max-height: 110rem;
+    width: 100%;
+    height: auto;
     object-fit: cover;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon, .active {
+    background-color: var(--color-verde);
+}
+
+.carousel-indicators button {
+    background-color: var(--color-verde); /* Color para los indicadores no activos */
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-acento); /* Color para el indicador activo */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon, .active:hover{
+    background-color: var(--color-acento);
 }
 .redes a.github i:hover {
     color: white; /* Color blanco para el icono de GitHub */
