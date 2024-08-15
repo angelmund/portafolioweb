@@ -167,12 +167,9 @@ html {
     color: var(--blanco);
     display: flex;
     align-items: center;
-    justify-content: center; 
 }
 
 .imgPerfil {
-    margin-left: 2rem;
-    margin-right: 10rem;
     max-width: 60rem;
     width: 15rem;
     height: 15rem;
@@ -181,6 +178,31 @@ html {
     background-color: var(--color-negro);
 }
 
+.redes a.github i {
+    color: white; /* Color blanco para el icono de GitHub */
+    font-size: 2rem; 
+    margin-right: 1rem;
+}
+
+.redes a.linkedin i {
+    color: #0077b5; /* Color azul para el icono de LinkedIn */
+    font-size: 2rem; 
+}
+.carousel-item img{
+    max-width: 60%;
+    max-height: 110rem;
+    object-fit: cover;
+}
+.redes a.github i:hover {
+    color: white; /* Color blanco para el icono de GitHub */
+    font-size: 6rem; 
+}
+
+.redes a.linkedin i:hover {
+    color: #0077b5; /* Color azul para el icono de LinkedIn */
+    font-size: 4rem; 
+}
+/*Experiencia*/
 .experiencia {
     background-color: var(--color-secundario);
     color: var(--blanco);

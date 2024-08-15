@@ -44,12 +44,12 @@ function seleccionar(){
 // }
 
 document.addEventListener('DOMContentLoaded',function(event){
-    var dataText = [ "Hola, soy Miguel Angel", "Desarrollador Web", "Egresado de la Ingeniería en Sistemas"];
+    var dataText = [ "Hola, soy Miguel Angel, Desarrollador Web, egresado de la Ingeniería en Sistemas"];
           function typeWriter(text, i, fnCallback) {
       if (i < (text.length)) {
        document.querySelector(".text").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
             setTimeout(function() {
-          typeWriter(text, i + 3, fnCallback)
+          typeWriter(text, i + 1, fnCallback)
         }, 500);
       }
       else if (typeof fnCallback == 'function') {
@@ -70,3 +70,14 @@ document.addEventListener('DOMContentLoaded',function(event){
     }
     StartTextAnimation(0);
   });
+
+//funcion para mandar mensaje de watsapp
+function enviarMensaje(){
+
+    let mensaje = "Hola, me gustaría cotizar un sistema o página web.";
+    let telefono = "2281843180";
+    let url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
+ btn_Enviar = document.querySelector(".contactarme");
+btn_Enviar.addEventListener('click', enviarMensaje);

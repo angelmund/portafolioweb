@@ -42,18 +42,53 @@
     <section id="inicio" class="inicio">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+                <!-- Imagen de perfil -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
                     <img class="imgPerfil" src="./img/ImgAngel.jpg" alt="Perfil">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2 ">
-                    <h1 class="ms-6">Angel Mundo</h1>
+                    <h1>Angel Mundo</h1>
                     <p>Desarrollador FullStack</p>
-                    <a href=""></a>
+                    <div class="col redes">
+                        <a  href="https://github.com/angelmund?tab=repositories" class="github" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/miguel-angel-mundo-8b075a22a" class="linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        
+                    </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+                <!-- Nombre y descripción -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
+                    
                     <h1 class="text"></h1>
                 </div>
+                <!-- Carrusel -->
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/WhatsApp Image 2024-08-11 at 19.56.12.jpeg" class="d-block w-100" alt="img1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/WhatsApp Image 2024-08-11 at 19.56.52.jpeg" class="d-block w-100" alt="img2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/WhatsApp Image 2024-08-11 at 19.57.07.jpeg" class="d-block w-100" alt="img3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
+            <button  type="button" class="btn btn-primary contactarme">Contactame</button>
         </div>
     </section>
 
