@@ -15,37 +15,37 @@
     /*Verde */
     --color-verde: #1cb99f;
     /*Negro degradado*/
-    --color-negro:#252a2e;
+    --color-negro: #252a2e;
     /*fond1*/
-    --color-fondo:#1e2326;
+    --color-fondo: #1e2326;
 
     /*Colores para el nav y se vayan cambiando*/
     --color-uno: #9216a8;
     --color-dos: #751286;
-    --color-tres:#580d65;
+    --color-tres: #580d65;
     --color-cuatro: #3a0943;
     --color-cinco: #1d0422;
 
     /*Cards de skills*/
 
     /*Python*/
-   --color-javascript:#f0db4f;
-   --color-text:#323330;
-   /*HTML*/
-   --color-html:rgba(227, 76, 38, 0.911);
-   /*Java*/
-   --color-java:#007396;
-   /*Python*/
-   --color-python:rgb(220,236,27);
-   --color-fondo:rgba(0, 115, 150, 0.911);
-   /*Laravel*/
-   --color-laravel:rgb(212, 59, 21);
-   /*css*/
-   --color-css:rgb(53, 182, 233);
-   /*Git*/
-   --color-git:#e44312de;
+    --color-javascript: #f0db4f;
+    --color-text: #323330;
+    /*HTML*/
+    --color-html: rgba(227, 76, 38, 0.911);
+    /*Java*/
+    --color-java: #007396;
+    /*Python*/
+    --color-python: rgb(220, 236, 27);
+    --color-fondo: rgba(0, 115, 150, 0.911);
+    /*Laravel*/
+    --color-laravel: rgb(212, 59, 21);
+    /*css*/
+    --color-css: rgb(53, 182, 233);
+    /*Git*/
+    --color-git: #e44312de;
 
-    
+
 }
 
 * {
@@ -62,7 +62,8 @@ html {
 
 /* Estilos generales para las tarjetas */
 .card {
-    background-color: var(--color-uno); /* Color de fondo por defecto */
+    background-color: var(--color-uno);
+    /* Color de fondo por defecto */
     color: var(--blanco);
     padding: 2.5rem .3rem;
     border-radius: 2rem;
@@ -93,7 +94,7 @@ html {
 
     75% {
         background: var(--color-cuatro);
-        
+
     }
 
     100% {
@@ -173,50 +174,96 @@ html {
     max-width: 60rem;
     width: 15rem;
     height: 15rem;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
     background-color: var(--color-negro);
 }
 
 .redes a.github i {
-    color: white; /* Color blanco para el icono de GitHub */
-    font-size: 2rem; 
+    color: white;
+    /* Color blanco para el icono de GitHub */
+    font-size: 2rem;
     margin-right: 1rem;
 }
 
 .redes a.linkedin i {
-    color: #0077b5; /* Color azul para el icono de LinkedIn */
-    font-size: 2rem; 
+    color: #0077b5;
+    /* Color azul para el icono de LinkedIn */
+    font-size: 2rem;
 }
-.carousel-item img{
+
+.carousel-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon, .active {
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.active {
     background-color: var(--color-verde);
 }
 
 .carousel-indicators button {
-    background-color: var(--color-verde); /* Color para los indicadores no activos */
+    background-color: var(--color-verde);
+    /* Color para los indicadores no activos */
 }
 
 .carousel-indicators .active {
-    background-color: var(--color-acento); /* Color para el indicador activo */
+    background-color: var(--color-acento);
+    /* Color para el indicador activo */
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon, .active:hover{
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.active:hover {
     background-color: var(--color-acento);
 }
+
 .redes a.github i:hover {
-    color: white; /* Color blanco para el icono de GitHub */
-    font-size: 6rem; 
+    color: white;
+    /* Color blanco para el icono de GitHub */
+    font-size: 6rem;
 }
 
 .redes a.linkedin i:hover {
-    color: #0077b5; /* Color azul para el icono de LinkedIn */
-    font-size: 4rem; 
+    color: #0077b5;
+    /* Color azul para el icono de LinkedIn */
+    font-size: 4rem;
 }
+
+.btn_contacto {
+    margin-left: 1rem;
+    margin-top: 0;
+    font-size: 0.8rem;
+}
+
+/* .btn_contacto  {
+
+    background-image: linear-gradient(to right, #A770EF 0%, #CF8BF3 51%, #A770EF 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(118, 238, 107);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+
+
+
+}
+
+.btn_contacto:hover {
+ 
+    background-position: right center;
+  
+    color: #fff;
+    text-decoration: none;
+} */
+
 /*Experiencia*/
 .experiencia {
     background-color: var(--color-secundario);
@@ -233,6 +280,7 @@ html {
     font-size: 4rem;
     font-family: 'Righteous';
 }
+
 /* 
 .fa-brands .fa-facebook-f {
     color: var(--color-primario);
@@ -260,10 +308,14 @@ html {
     text-align: center;
     padding: 20px 0;
 }
-.becario{
-    box-shadow: 0 6px 8px var(--color-primario); /* Sombra para HTML */
-    background-color: var(--color-java); /* Fondo para HTML */
-    color: var(--blanco); /* Color de texto para HTML */
+
+.becario {
+    box-shadow: 0 6px 8px var(--color-primario);
+    /* Sombra para HTML */
+    background-color: var(--color-java);
+    /* Fondo para HTML */
+    color: var(--blanco);
+    /* Color de texto para HTML */
     margin-top: 1rem;
 }
 
@@ -281,85 +333,111 @@ html {
 }
 
 
-.html{
-    box-shadow: 0 6px 8px var(--color-html); /* Sombra para HTML */
-    background-color: var(--color-html); /* Fondo para HTML */
-    color: var(--blanco); /* Color de texto para HTML */
+.html {
+    box-shadow: 0 6px 8px var(--color-html);
+    /* Sombra para HTML */
+    background-color: var(--color-html);
+    /* Fondo para HTML */
+    color: var(--blanco);
+    /* Color de texto para HTML */
     margin-top: 1rem;
 }
 
-.javascript{
-    box-shadow: 0 6px 8px var(--color-javascript); /* Sombra para JavaScript */
-    background-color: var(--color-javascript); /* Fondo para JavaScript */
-    color: var(--color-text); /* Color de texto para JavaScript */
+.javascript {
+    box-shadow: 0 6px 8px var(--color-javascript);
+    /* Sombra para JavaScript */
+    background-color: var(--color-javascript);
+    /* Fondo para JavaScript */
+    color: var(--color-text);
+    /* Color de texto para JavaScript */
     margin-top: 1rem;
 }
 
-.java{
-    box-shadow: 0 6px 8px var(--color-java); /* Sombra para Java */
-    background-color: var(--color-java); /* Fondo para Java */
-    color: var(--blanco); /* Color de texto para Java */
+.java {
+    box-shadow: 0 6px 8px var(--color-java);
+    /* Sombra para Java */
+    background-color: var(--color-java);
+    /* Fondo para Java */
+    color: var(--blanco);
+    /* Color de texto para Java */
     margin-top: 1rem;
 }
 
-.python{
-    box-shadow: 0 6px 8px var(--color-fondo); /* Sombra para Java */
+.python {
+    box-shadow: 0 6px 8px var(--color-fondo);
+    /* Sombra para Java */
     background: var(--color-python);
-    color: var(--blanco); /* Color de texto para pyhon */
+    color: var(--blanco);
+    /* Color de texto para pyhon */
     margin-top: 1rem;
 }
-.sql{
-    box-shadow: 0 6px 8px var(--color-naranja); /* Sombra para Java */
+
+.sql {
+    box-shadow: 0 6px 8px var(--color-naranja);
+    /* Sombra para Java */
     background: var(--color-naranja);
-    color: var(--blanco); /* Color de texto para sql */
+    color: var(--blanco);
+    /* Color de texto para sql */
     margin-top: 1rem;
 }
 
-.laravel{
-    box-shadow: 0 6px 8px var(--color-laravel); /* Sombra para laravel */
+.laravel {
+    box-shadow: 0 6px 8px var(--color-laravel);
+    /* Sombra para laravel */
     background: var(--blanco);
-    color: var(--color-laravel); /* Color de texto para laravel */
+    color: var(--color-laravel);
+    /* Color de texto para laravel */
     margin-top: 1rem;
 }
 
-.php{
-    box-shadow: 0 6px 8px var(--color-azulRey); /* Sombra para php */
+.php {
+    box-shadow: 0 6px 8px var(--color-azulRey);
+    /* Sombra para php */
     background: var(--color-azulRey);
-    color: var(--blanco); /* Color de texto para php */
+    color: var(--blanco);
+    /* Color de texto para php */
     margin-top: 1rem;
 }
 
-.css{
-    box-shadow: 0 6px 8px var(--color-azulRey); /* Sombra para Css */
+.css {
+    box-shadow: 0 6px 8px var(--color-azulRey);
+    /* Sombra para Css */
     background: var(--color-css);
-    color: var(--blanco); /* Color de texto para css */
-     margin-top: 1rem;
+    color: var(--blanco);
+    /* Color de texto para css */
+    margin-top: 1rem;
 }
 
-.git{
-    box-shadow: 0 6px 8px var(--color-git); /* Sombra para Css */
+.git {
+    box-shadow: 0 6px 8px var(--color-git);
+    /* Sombra para Css */
     background: var(--color-text);
-    color: var(--color-git); /* Color de texto para css */
-     margin-top: 1rem;
+    color: var(--color-git);
+    /* Color de texto para css */
+    margin-top: 1rem;
 }
 
-.bootstrap{
-    background-color: var(--color-uno); /* Color de fondo por defecto */
+.bootstrap {
+    background-color: var(--color-uno);
+    /* Color de fondo por defecto */
     color: var(--blanco);
     padding: 2.5rem .3rem;
     border-radius: 2rem;
     transition: 0.5s;
     margin-top: 1rem;
 }
+
 .card span {
     font-size: 2.5rem;
     font-family: 'Righteous';
     text-align: center;
     padding: 1rem 0;
 }
+
 .skill i {
-    font-size: 3rem; 
+    font-size: 3rem;
 }
+
 /* .card.javascript:hover {
     box-shadow: 0 6px 8px var(--color-javascript); 
     background-color: var(--color-javascript); 
@@ -432,6 +510,7 @@ html {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 .skills h2 {
     font-size: 4rem;
     font-family: 'Righteous';
