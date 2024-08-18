@@ -43,33 +43,36 @@ function seleccionar(){
 //     efectoHabilidades();
 // }
 
-document.addEventListener('DOMContentLoaded',function(event){
-    var dataText = [ "Hola, soy Miguel Angel, Desarrollador Web, egresado de la Ingeniería en Sistemas"];
-          function typeWriter(text, i, fnCallback) {
-      if (i < (text.length)) {
-       document.querySelector(".text").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
-            setTimeout(function() {
-          typeWriter(text, i + 1, fnCallback)
-        }, 500);
-      }
-      else if (typeof fnCallback == 'function') {
-        setTimeout(fnCallback, 10);
-      }
-    }
-     function StartTextAnimation(i) {
-       if (typeof dataText[i] == 'undefined'){
+document.addEventListener('DOMContentLoaded', function(event) {
+  var dataText = ["Hola, soy Miguel Angel, Desarrollador Web, egresado de la Ingeniería en Sistemas"];
+
+  function typeWriter(text, i, fnCallback) {
+      if (i < text.length) {
+          document.querySelector(".text").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
           setTimeout(function() {
-            StartTextAnimation(0);
-          }, 500);
-       }
-      if (i < dataText[i].length) {
-       typeWriter(dataText[i], 0, function(){
-         StartTextAnimation(i + 1);
-       });
+              typeWriter(text, i + 1, fnCallback);
+          }, 100); // velocidad de escritura aquí
+      } else if (typeof fnCallback == 'function') {
+          setTimeout(fnCallback, 700); //  tiempo de espera antes de llamar a la siguiente animación
       }
-    }
-    StartTextAnimation(0);
-  });
+  }
+
+  function StartTextAnimation(i) {
+      if (typeof dataText[i] == 'undefined') {
+          return; // Termina la animación cuando se han mostrado todos los textos
+      }
+      if (i < dataText.length) {
+          typeWriter(dataText[i], 0, function() {
+              StartTextAnimation(i + 1);
+          });
+      }
+  }
+
+  // Esperar a que la página se cargue completamente
+  window.onload = function() {
+      StartTextAnimation(0);
+  };
+});
 
 //funcion para mandar mensaje de watsapp
 function enviarMensaje(){
