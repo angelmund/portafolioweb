@@ -437,7 +437,24 @@ html {
 .skill i {
     font-size: 3rem;
 }
-
+.postgresql{
+    box-shadow: 0 6px 8px var(--color-java);
+    /* Sombra para Java */
+    background: var(--blanco);
+    color: var(--color-secundario);
+}
+.workbench{
+    box-shadow: 0 6px 8px var(--color-primario);
+    /* Sombra para Java */
+    background: var(--color-naranja);
+    color: var(--color-java);
+}
+.unity{
+    box-shadow: 0 6px 8px var(--color-azulRey);
+    /* Sombra para Java */
+    background: var(--color-text);
+    color: var(--blanco);
+}
 /* .card.javascript:hover {
     box-shadow: 0 6px 8px var(--color-javascript); 
     background-color: var(--color-javascript); 
