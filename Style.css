@@ -612,7 +612,7 @@ html {
 
 .portafolio .galeria .proyecto {
     position: relative;
-    max-width: 340px;
+    max-width: 30rem;
     height: fit-content;
     margin: 10px;
     cursor: pointer;
@@ -651,7 +651,52 @@ html {
 .portafolio .galeria .proyecto .overly:hover h3 {
     margin-bottom: 0px;
 }
+.html-icono{
+    box-shadow: 0 6px 8px var(--color-html);
+    /* Sombra para HTML */
+    background-color: var(--color-html);
+    /* Fondo para HTML */
+    color: var(--blanco);
+}
+.laravel-icono{
+    box-shadow: 0 6px 8px var(--color-laravel);
+    /* Sombra para HTML */
+    background-color: var(--color-laravel);
+    /* Fondo para HTML */
+    color: var(--blanco);
+}
 
+.php-icono{
+    box-shadow: 0 6px 8px var(--color-azulRey);
+    /* Sombra para HTML */
+    background-color: var(--color-azulRey);
+    /* Fondo para HTML */
+    color: var(--blanco);
+}
+
+.bootstrap-icono{
+    box-shadow: 0 6px 8px var(--color-uno);
+    /* Sombra para HTML */
+    background-color: var(--color-uno);
+    /* Fondo para HTML */
+    color: var(--blanco);
+}
+
+.javascript-icono{
+    box-shadow: 0 6px 8px var(--color-javascript);
+    /* Sombra para HTML */
+    background-color: var(--color-javascript);
+    /* Fondo para HTML */
+    color: var(--blanco);
+}
+
+.sql-icono{
+    box-shadow: 0 6px 8px var(--color-naranja);
+    /* Sombra para HTML */
+    background-color: var(--color-naranja);
+    /* Fondo para HTML */
+    color: var(--blanco);
+}
 /* CONTACTO*/
 .contacto {
     

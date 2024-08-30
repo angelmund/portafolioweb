@@ -84,3 +84,17 @@ function enviarMensaje(){
 }
  btn_Enviar = document.querySelector(".contactarme");
 btn_Enviar.addEventListener('click', enviarMensaje);
+
+
+//para abrir el modal de las imagenes de los proyectos
+const modalImage = document.getElementById('modalImage');
+const openModalButtons = document.querySelectorAll('.open-modal');
+
+//iterar sobre cada boton para abrir el modal
+openModalButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const projectImg = this.closest('.proyecto').querySelector('.project-img');
+        modalImage.src = projectImg.src;
+        modalImage.alt = projectImg.alt;
+    });
+});
