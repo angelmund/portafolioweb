@@ -167,3 +167,11 @@ async function enviarCorreo() {
         console.error("Error al procesar la solicitud:", error);
     }
 }
+
+document.getElementById('festMusic').addEventListener('shown.bs.modal', function () {
+    var myCarousel = document.querySelector('#carouselExampleIndicators');
+    var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2000,
+        ride: 'carousel'
+    });
+});

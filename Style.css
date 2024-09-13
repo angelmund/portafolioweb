@@ -698,6 +698,9 @@ html {
     color: var(--blanco);
 }
 
+.text-pink {
+    color: #ff69b4; /* Color rosa */
+}
 
 /* CONTACTO */
 .contacto {
