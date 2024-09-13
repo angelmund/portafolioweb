@@ -697,68 +697,51 @@ html {
     /* Fondo para HTML */
     color: var(--blanco);
 }
-/* CONTACTO*/
+
+
+/* CONTACTO */
 .contacto {
-    
-    background-color: var(--color-text);
+    background-color: var(--color-fondo);
     color: var(--blanco);
-    padding: 50px 0;
+    padding: 3.125rem 1.25rem; /* 50px 20px */
 }
 
-.contacto .contenido-seccion {
-    max-width: 1100px;
+.contacto .container {
+    max-width: 37.5rem; /* 600px */
     margin: auto;
 }
 
 .contacto h2 {
-    font-size: 48px;
+    font-size: 2.25rem; /* 36px */
     font-family: 'Righteous';
     text-align: center;
-    padding: 20px 0;
+    padding: 1.25rem 0; /* 20px 0 */
 }
 
-.contacto .fila {
-    display: flex;
+.contacto .form {
+    background-color: var(--color-tres);
+    padding: 2rem; /* 32px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--color-texto);
 }
 
-.contacto .col {
-    width: 50%;
-    padding: 10px;
-    position: relative;
+.contacto .form-label {
+    font-size: 1.125rem; /* 18px */
 }
 
+.contacto .form-control {
+    margin-bottom: 0.9375rem; /* 15px */
+    border-radius: 0.25rem; /* 4px */
+}
 
-
-.contacto button {
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid var(--blanco);
-    width: fit-content;
+.contacto .btn {
     display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
-    font-size: 16px;
-    color: var(--blanco);
-    position: relative;
-    z-index: 10;
-}
-
-.contacto button .overly {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #1cb698;
-    z-index: -1;
-    transition: 1s;
-}
-
-.contacto button:hover .overly {
     width: 100%;
+    padding: 0.75rem; /* 12px */
+    font-size: 1rem; /* 16px */
+    border-radius: 0.25rem; /* 4px */
 }
-
-
 
 footer {
     background-color: var(--color-negro);
