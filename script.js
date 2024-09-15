@@ -44,34 +44,36 @@ function seleccionar(){
 // }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  var dataText = ["Hola, soy Miguel Angel, Desarrollador Web, egresado de la Ingeniería en Sistemas"];
+    var dataText = ["Hola, soy Miguel Angel, Desarrollador Web, egresado de la Ingeniería en Sistemas"];
+    var cursor = "|";
 
-  function typeWriter(text, i, fnCallback) {
-      if (i < text.length) {
-          document.querySelector(".text").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-          setTimeout(function() {
-              typeWriter(text, i + 1, fnCallback);
-          }, 100); // velocidad de escritura aquí
-      } else if (typeof fnCallback == 'function') {
-          setTimeout(fnCallback, 700); //  tiempo de espera antes de llamar a la siguiente animación
-      }
-  }
+    function typeWriter(text, i, fnCallback) {
+        if (i < text.length) {
+            document.querySelector(".text").innerHTML = text.substring(0, i + 1) + '<span class="cursor">' + cursor + '</span>';
+            setTimeout(function() {
+                typeWriter(text, i + 1, fnCallback);
+            }, 100); // velocidad de escritura aquí
+        } else if (typeof fnCallback == 'function') {
+            document.querySelector(".text").innerHTML = text + '<span class="cursor">' + cursor + '</span>';
+            setTimeout(fnCallback, 700); // tiempo de espera antes de llamar a la siguiente animación
+        }
+    }
 
-  function StartTextAnimation(i) {
-      if (typeof dataText[i] == 'undefined') {
-          return; // Termina la animación cuando se han mostrado todos los textos
-      }
-      if (i < dataText.length) {
-          typeWriter(dataText[i], 0, function() {
-              StartTextAnimation(i + 1);
-          });
-      }
-  }
+    function StartTextAnimation(i) {
+        if (typeof dataText[i] == 'undefined') {
+            return; // Termina la animación cuando se han mostrado todos los textos
+        }
+        if (i < dataText.length) {
+            typeWriter(dataText[i], 0, function() {
+                StartTextAnimation(i + 1);
+            });
+        }
+    }
 
-  // Esperar a que la página se cargue completamente
-  window.onload = function() {
-      StartTextAnimation(0);
-  };
+    // Esperar a que la página se cargue completamente
+    window.onload = function() {
+        StartTextAnimation(0);
+    };
 });
 
 //funcion para mandar mensaje de watsapp
@@ -168,10 +170,29 @@ async function enviarCorreo() {
     }
 }
 
-document.getElementById('festMusic').addEventListener('shown.bs.modal', function () {
-    var myCarousel = document.querySelector('#carouselExampleIndicators');
-    var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 2000,
-        ride: 'carousel'
+// document.getElementById('festMusic').addEventListener('shown.bs.modal', function () {
+//     var myCarousel = document.querySelector('#carouselExampleIndicators');
+//     var carousel = new bootstrap.Carousel(myCarousel, {
+//         interval: 2000,
+//         ride: 'carousel'
+//     });
+// });
+if (window.innerWidth <= 576){
+    window.addEventListener('scroll', () => {
+    
+        const elementos = document.querySelectorAll('.portafolio .galeria .proyecto .overly');
+    
+        
+        elementos.forEach(elemento => {
+            const rect = elemento.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+            
+            if (rect.top >= 0 && rect.top <= windowHeight) {
+                elemento.classList.add('scroll-active');
+            } else {
+                elemento.classList.remove('scroll-active');
+            }
+        });
     });
-});
+}

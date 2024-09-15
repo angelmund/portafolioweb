@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
     --color-primario: #b9b91c;
@@ -51,12 +51,15 @@
     /*Git*/
     --color-git: #e44312de;
 
+    /*Formulario*/
+    --color-form: #2b2b2b;
+
 
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Work Sans ';
+    font-family: 'Quicksand';
     margin: 0;
     padding: 0;
 }
@@ -131,8 +134,9 @@ html {
 }
 
 .contenedor-header header .logo a {
-    font-family: 'Righteous';
-    font-size: 36px;
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
     color: var(--color-primario);
     text-decoration: none;
     align-items: flex-start;
@@ -150,11 +154,13 @@ html {
     padding: 3px;
     transition: .10S;
     text-decoration: none;
+    font-family: Unlock;
 }
 
 .contenedor-header header nav ul li a:hover {
     color: var(--color-primario);
     font-size: 4rem;
+    font-family: "Lilita One", sans-serif;;
 }
 
 .nav-responsive {
@@ -167,6 +173,20 @@ html {
 }
 
 /* SECCION INICIO */
+/*Le da las propiedades a mi cursor, es decir a mi | en el texto que se va mostrando*/
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+/*Animación de aparecr y desaparecer de mi |*/
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 .inicio {
     background: var(--color-negro);
     background-size: cover;
@@ -189,7 +209,7 @@ html {
     color: white;
     /* Color blanco para el icono de GitHub */
     font-size: 2rem;
-    margin-right: 1rem;
+    margin-right: .2rem;
 }
 
 .redes a.linkedin i {
@@ -284,7 +304,7 @@ html {
 
 .experiencia h2 {
     font-size: 4rem;
-    font-family: 'Righteous';
+    font-family: 'Quicksand';
 }
 
 /* 
@@ -310,7 +330,7 @@ html {
 
 .experiencia h2 {
     font-size: 4rem;
-    font-family: 'Righteous';
+    font-family: 'Quicksand';
     text-align: center;
     padding: 20px 0;
 }
@@ -435,7 +455,7 @@ html {
 
 .card span {
     font-size: 2.5rem;
-    font-family: 'Righteous';
+    font-family: 'Quicksand';
     text-align: center;
     padding: 1rem 0;
 }
@@ -568,7 +588,7 @@ html {
 
 .skills h2 {
     font-size: 4rem;
-    font-family: 'Righteous';
+    font-family: 'Quicksand';
     text-align: center;
     padding: 20px 0;
 }
@@ -599,7 +619,7 @@ html {
 
 .portafolio h2 {
     font-size: 48px;
-    font-family: 'Righteous';
+    font-family: 'Quicksand';
     text-align: center;
     padding: 20px 0;
 }
@@ -701,7 +721,9 @@ html {
 .text-pink {
     color: #ff69b4; /* Color rosa */
 }
-
+.portafolio .galeria .proyecto .overly.scroll-active {
+    opacity: 1;
+}
 /* CONTACTO */
 .contacto {
     background-color: var(--color-fondo);
@@ -716,13 +738,13 @@ html {
 
 .contacto h2 {
     font-size: 2.25rem; /* 36px */
-    font-family: 'Righteous';
+    font-family: 'Quicksand';
     text-align: center;
     padding: 1.25rem 0; /* 20px 0 */
 }
 
 .contacto .form {
-    background-color: var(--color-tres);
+    background-color: var(--color-form);
     padding: 2rem; /* 32px */
     border-radius: 0.5rem; /* 8px */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -754,7 +776,7 @@ footer {
     position: relative;
     width: 100%;
 }
-
+/* 
 footer .redes {
     margin: bottom 20px;
 }
@@ -786,7 +808,7 @@ footer .arriba {
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
-}
+} */
 
 /*RESPONSIVE*/
 @media screen and (max-width:980px) {
