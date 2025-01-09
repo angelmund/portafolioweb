@@ -345,7 +345,15 @@ html {
     margin-top: 1rem;
 }
 
-
+.demont {
+    box-shadow: 0 6px 8px var(--blanco);
+    /* Sombra para HTML */
+    background-color: var(--color-cinco);
+    /* Fondo para HTML */
+    color: var(--blanco);
+    /* Color de texto para HTML */
+    margin-top: 1rem;
+}
 /*SKILLS*/
 .skills {
     background-color: var(--color-negro);

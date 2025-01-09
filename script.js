@@ -44,7 +44,7 @@ function seleccionar(){
 // }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    var dataText = ["Hola, soy Miguel Angel, Desarrollador Web, egresado de la Ingeniería en Sistemas"];
+    var dataText = ["Hola, soy Miguel Ángel, egresado de la Ingeniería en Sistemas. Me dedico al desarrollo de software y páginas web.", "Me gusta aprender cosas nuevas y enfrentar retos.", "Si tienes un proyecto en mente, ¡contáctame!"];
     var cursor = "|";
 
     function typeWriter(text, i, fnCallback) {
