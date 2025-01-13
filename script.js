@@ -1,21 +1,20 @@
-let menuVisible =false;
-//funcion que oculta el menu 
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList="";
-        menuVisible =false;
-
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible =true;
-    }
+let menuVisible = false;
+//funcion que oculta el menu
+function mostrarOcultarMenu() {
+  if (menuVisible) {
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
+  } else {
+    document.getElementById("nav").classList = "responsive";
+    menuVisible = true;
+  }
 }
-function seleccionar(){
-    //oculta una vez que se selecciona una opción
-    document.getElementById("nav").classList ="";
-    menuVisible =false;
+function seleccionar() {
+  //oculta una vez que se selecciona una opción
+  document.getElementById("nav").classList = "";
+  menuVisible = false;
 }
-// //funci[on] para animaciones de las habilidades 
+// //funci[on] para animaciones de las habilidades
 // function efectoHabilidades(){
 //     var skills =document.getElementById("skills");
 //     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
@@ -43,156 +42,137 @@ function seleccionar(){
 //     efectoHabilidades();
 // }
 
-document.addEventListener('DOMContentLoaded', function(event) {
-    var dataText = ["Hola, soy Miguel Ángel, egresado de la Ingeniería en Sistemas. Me dedico al desarrollo de software y páginas web.", "Me gusta aprender cosas nuevas y enfrentar retos.", "Si tienes un proyecto en mente, ¡contáctame!"];
-    var cursor = "|";
+document.addEventListener("DOMContentLoaded", function (event) {
+  var dataText = [
+    "Hola, soy Miguel Ángel, egresado de la Ingeniería en Sistemas. Me dedico al desarrollo de software y páginas web.",
+    "Me gusta aprender cosas nuevas y enfrentar retos.",
+    "Si tienes un proyecto en mente, ¡contáctame!",
+  ];
+  var cursor = "|";
 
-    function typeWriter(text, i, fnCallback) {
-        if (i < text.length) {
-            document.querySelector(".text").innerHTML = text.substring(0, i + 1) + '<span class="cursor">' + cursor + '</span>';
-            setTimeout(function() {
-                typeWriter(text, i + 1, fnCallback);
-            }, 100); // velocidad de escritura aquí
-        } else if (typeof fnCallback == 'function') {
-            document.querySelector(".text").innerHTML = text + '<span class="cursor">' + cursor + '</span>';
-            setTimeout(fnCallback, 700); // tiempo de espera antes de llamar a la siguiente animación
-        }
+  function typeWriter(text, i, fnCallback) {
+    if (i < text.length) {
+      document.querySelector(".text").innerHTML =
+        text.substring(0, i + 1) + '<span class="cursor">' + cursor + "</span>";
+      setTimeout(function () {
+        typeWriter(text, i + 1, fnCallback);
+      }, 100); // velocidad de escritura aquí
+    } else if (typeof fnCallback == "function") {
+      document.querySelector(".text").innerHTML =
+        text + '<span class="cursor">' + cursor + "</span>";
+      setTimeout(fnCallback, 700); // tiempo de espera antes de llamar a la siguiente animación
     }
+  }
 
-    function StartTextAnimation(i) {
-        if (typeof dataText[i] == 'undefined') {
-            return; // Termina la animación cuando se han mostrado todos los textos
-        }
-        if (i < dataText.length) {
-            typeWriter(dataText[i], 0, function() {
-                StartTextAnimation(i + 1);
-            });
-        }
+  function StartTextAnimation(i) {
+    if (typeof dataText[i] == "undefined") {
+      return; // Termina la animación cuando se han mostrado todos los textos
     }
+    if (i < dataText.length) {
+      typeWriter(dataText[i], 0, function () {
+        StartTextAnimation(i + 1);
+      });
+    }
+  }
 
-    // Esperar a que la página se cargue completamente
-    window.onload = function() {
-        StartTextAnimation(0);
-    };
+  // Esperar a que la página se cargue completamente
+  window.onload = function () {
+    StartTextAnimation(0);
+  };
 });
 
 //funcion para mandar mensaje de watsapp
-function enviarMensaje(){
-
-    let mensaje = "Hola, me gustaría cotizar un sistema o página web.";
-    let telefono = "2281843180";
-    let url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
+function enviarMensaje() {
+  let mensaje = "Hola, me gustaría cotizar un sistema o página web.";
+  let telefono = "2281843180";
+  let url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(
+    mensaje
+  )}`;
+  window.open(url, "_blank");
 }
- btn_Enviar = document.querySelector(".contactarme");
-btn_Enviar.addEventListener('click', enviarMensaje);
-
 
 //para abrir el modal de las imagenes de los proyectos
-const modalImage = document.getElementById('modalImage');
-const openModalButtons = document.querySelectorAll('.open-modal');
+const modalImage = document.getElementById("modalImage");
+const openModalButtons = document.querySelectorAll(".open-modal");
 
 //iterar sobre cada boton para abrir el modal
-openModalButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const projectImg = this.closest('.proyecto').querySelector('.project-img');
-        modalImage.src = projectImg.src;
-        modalImage.alt = projectImg.alt;
-    });
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const projectImg = this.closest(".proyecto").querySelector(".project-img");
+    modalImage.src = projectImg.src;
+    modalImage.alt = projectImg.alt;
+  });
 });
 
+if (window.innerWidth <= 576) {
+  window.addEventListener("scroll", () => {
+    const elementos = document.querySelectorAll(
+      ".portafolio .galeria .proyecto .overly"
+    );
 
+    elementos.forEach((elemento) => {
+      const rect = elemento.getBoundingClientRect();
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
 
-//boton de enviar correo
-btn_Enviar = document.querySelector(".btn_send");
-btn_Enviar.addEventListener('click', enviarCorreo);
-
-async function enviarCorreo() {
-    const url = 'php/';
-    try {
-        const formData = new FormData($('#contactForm')[0]);
-
-        const response = await fetch(url + 'contacto.php', {
-            method: 'POST',
-            mode: 'cors',
-            redirect: 'manual',
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            body: formData
-        });
-
-        const data = await response.json();
-        switch (data.idnotificacion) {
-            case 1:
-                
-                Swal.fire({
-                    title: data.mensaje,
-                    icon: "success",
-                    showConfirmButton: false,  // No mostrar el botón "Ok"
-                    timer: 1000,  // Cerrar automáticamente después de 1500 milisegundos (1.5 segundos)
-                    timerProgressBar: true  // Mostrar una barra de progreso durante el temporizador
-                });
-                // Esperar un breve período de tiempo antes de recargar la página
-                setTimeout(function () {
-                    document.getElementById('contactForm').reset();
-                    window.location.reload();
-                }, 1000); // Espera 1 segundo
-
-                break;
-
-            case 2:
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: data.mensaje
-                });
-                break;
-
-            case 3:
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: data.mensaje
-                });
-                break;
-
-            default:
-                Swal.fire({
-                    icon: "info",
-                    title: "Info...",
-                    text: "Error desconocido"
-                });
-        }
-
-    } catch (error) {
-        console.error("Error al procesar la solicitud:", error);
-    }
+      if (rect.top >= 0 && rect.top <= windowHeight) {
+        elemento.classList.add("scroll-active");
+      } else {
+        elemento.classList.remove("scroll-active");
+      }
+    });
+  });
 }
 
-// document.getElementById('festMusic').addEventListener('shown.bs.modal', function () {
-//     var myCarousel = document.querySelector('#carouselExampleIndicators');
-//     var carousel = new bootstrap.Carousel(myCarousel, {
-//         interval: 2000,
-//         ride: 'carousel'
-//     });
-// });
-if (window.innerWidth <= 576){
-    window.addEventListener('scroll', () => {
-    
-        const elementos = document.querySelectorAll('.portafolio .galeria .proyecto .overly');
-    
-        
-        elementos.forEach(elemento => {
-            const rect = elemento.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    
-            
-            if (rect.top >= 0 && rect.top <= windowHeight) {
-                elemento.classList.add('scroll-active');
-            } else {
-                elemento.classList.remove('scroll-active');
-            }
+
+//ajax para el formulario de contacto
+var form = document.getElementById("contactForm");
+
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("btn_send");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+    Accept: "application/json",
+    },
+})
+    .then((response) => {
+    if (response.ok) {
+        Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Gracias por tu mensaje me pondré en contacto contigo pronto.",
+        showConfirmButton: false,
+        timer: 4500
         });
+        form.reset();
+    } else {
+        response.json().then((data) => {
+        if (Object.hasOwn(data, "errors")) {
+            status.innerHTML = data["errors"]
+            .map((error) => error["message"])
+            .join(", ");
+        } else {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+            Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Algo salió mal, por favor intenta de nuevo.",
+            });
+        }
+        });
+    }
+    })
+    .catch((error) => {
+    status.innerHTML = "Oops! There was a problem submitting your form";
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Algo salió mal, por favor intenta de nuevo.",
+    });
     });
 }
+form.addEventListener("submit", handleSubmit);
