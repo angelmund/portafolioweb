@@ -44,9 +44,13 @@ function seleccionar() {
 
 document.addEventListener("DOMContentLoaded", function (event) {
   var dataText = [
-    "Hola, soy Miguel Ángel, egresado de la Ingeniería en Sistemas. Me dedico al desarrollo de software y páginas web.",
-    "Me gusta aprender cosas nuevas y enfrentar retos.",
-    "Si tienes un proyecto en mente, ¡contáctame!",
+    "Bienvenido a mi portafolio.",
+    "Mi nombre es Miguel Ángel.",
+    "Soy egresado de la Ingeniería en Sistemas.",
+    "Me dedico al desarrollo de software y páginas web.",
+    "Tengo experiencia en lenguajes como Java, Python, JavaScript, PHP y SQL.",
+    "He trabajado con los frameworks de Laravel y Flask.", 
+    "Me gusta aprender cosas nuevas y enfrentar nuevos retos."
   ];
   var cursor = "|";
 
